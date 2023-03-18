@@ -1,13 +1,14 @@
 # == Schema Information
 #
-# Table name: todos
+# Table name: users
 #
 #  id         :bigint           not null, primary key
-#  title      :string(255)
+#  email      :string(255)
+#  name       :string(255)
+#  uid        :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :integer
 #
-class Todo < ApplicationRecord
-  belongs_to :user 
+class User < ApplicationRecord
+  has_many :todos
 end

@@ -8,10 +8,11 @@
 #  updated_at :datetime         not null
 #  user_id    :integer
 #
-require "test_helper"
+class TodoSerializer < ActiveModel::Serializer
+  attributes :id, :title, :user_id, :username
+  belongs_to :user
 
-class TodoTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def username
+    object.user.name
+  end
 end

@@ -1,16 +1,17 @@
 # == Schema Information
 #
-# Table name: todos
+# Table name: users
 #
 #  id         :bigint           not null, primary key
-#  title      :string(255)
+#  email      :string(255)
+#  name       :string(255)
+#  uid        :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :integer
 #
 require "test_helper"
 
-class TodoTest < ActiveSupport::TestCase
+class UserTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
