@@ -1,0 +1,3 @@
+# ignore environments
+api/environments/db.env
+api/db/grant_user.sql
