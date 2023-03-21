@@ -8,6 +8,7 @@
 <script>
   import AddTodo from "@/components/AddTodo";
   import TodoList from "@/components/TodoList";
+  import axios from "@/plugins/axios";
 
   export default {
     components: {
@@ -20,10 +21,15 @@
       };
     },
     methods: {
-      addTodo(title) {
-        this.todos.push({
-          title
-        });
+      async addTodo(title) {
+        try {
+          await axios.post("/v1/todos", { title });
+          this.todos.push({
+            title
+          });
+        } catch (error) {
+          console.error(error);
+        }
       },
     },
   };
