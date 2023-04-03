@@ -33,6 +33,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    // リロードするたびに呼び出すようにする。componentの描画前に呼び出すことで「ユーザー情報がない」状態を防ぐ
+    "@/plugins/authCheck"
   ],
   /*
   ** Nuxt.js dev-modules

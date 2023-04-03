@@ -1,6 +1,11 @@
 class V1::UsersController < ApplicationController
   def index
-    users = User.all
+    # users = User.all
+    users = if params[:uid] 
+      User.find_by(uid: params[:uid])
+    else 
+      User.all
+    end
     render json: users
   end
 
