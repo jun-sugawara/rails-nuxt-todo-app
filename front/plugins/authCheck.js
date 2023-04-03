@@ -2,7 +2,7 @@ import firebase from "@/plugins/firebase";
 import axios from "@/plugins/axios";
 
 const authCheck = ({ store, redirect }) => {
-  // onAuthStateChangedはfirebaseの機能。ユーザーの情報をfirebaseへ確認しに行く。
+  // onAuthStateChangedはfirebaseのメソッド。ユーザーの情報をfirebaseへ確認しに行く。
   firebase.auth().onAuthStateChanged(async user => {
     // ユーザーが存在していれば、ユーザー情報を返す
     if (user) {
