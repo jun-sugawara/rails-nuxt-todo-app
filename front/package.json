@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "firebase": "^9.18.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

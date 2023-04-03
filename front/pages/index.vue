@@ -20,6 +20,9 @@
         todos: [],
       };
     },
+    created() {
+      console.log("API_KEY:", process.env.API_KEY);
+    },
     methods: {
       async addTodo(title) {
         try {
