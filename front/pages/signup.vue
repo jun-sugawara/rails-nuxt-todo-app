@@ -75,6 +75,9 @@ export default {
         uid: res.user.uid
       };
 
+      this.$store.dispatch("loading/setLoading", true); // 追加
+
+      const { data } = 
       await axios
         .post("/v1/users", {
           user
@@ -84,6 +87,11 @@ export default {
             err
           });
         });
+
+        setTimeout(() => {
+          this.$store.dispatch("loading/setLoading", false);
+        }, 3000);
+        this.$store.dispatch("auth/setUser", data);
         
       this.$router.push("/");
     }

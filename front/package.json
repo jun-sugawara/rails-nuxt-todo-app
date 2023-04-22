@@ -14,6 +14,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "firebase": "^9.18.0",
+    "loaders.css": "^0.1.2",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
