@@ -4,7 +4,7 @@
 
 // ユーザー情報の入れ物を作成。デフォルト値はnull
 export const state = () => ({
-  currentUser: null
+  currentUser: {}
 });
 
 // setUserというstateに書き込むためのメソッドを作成。actionからsetUserの呼び出しを受けた際に
